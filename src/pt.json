@@ -1,5 +1,7 @@
 {
   "items": [{
+    "Pt" : "Português",
+    "En" : "Inglês",
     "Home": "Home",
     "Curriculo": "Currículo",
     "Sobre": "Quem sou eu?",
@@ -25,6 +27,9 @@
     "Web Designer" : "Web Designer",
     "Web Developer" : "Web Developer",
     "Designer Grafico" : "Designer Gráfico",
+    "Desenhista" : "Desenhista",
+    "Artista" : "Artista",
+    "YouTuber" : "YouTuber",
     "Sobretexto" : "Alexsandro Wnuk Filho é um estudante de Sistemas de Informação apaixonado pelas artes de uma forma geral. Escutando de pop a rock, do mainstream ao desconhecido, para este garoto é um desafio compactar a sua biblioteca musical para caber no cartão de memoria. Julgando o mundo com seu humor levemente ácido ele se destaca sendo muitas vezes considerado “exótico”, “excêntrico” e as vezes “ultrajante”. Se entediando facilmente com a rotina, Alexsandro gosta da constante procura por novas experiências, novos conhecimentos, novas musicas e curiosidades. Autodidata ele começou a brincar com a arte pelo design gráfico e hoje procura aprender mais sobre a sua paixão, a musica. Mantendo seus sonhos sempre altos ele espera algum dia se inserir significativamente no mundo da arte.",
     "Blog Não, Sim, Claro, Mas" : "Blog \"Não, Sim, Claro, Mas\"",
     "IBM Fintech Singapore" : "IBM Fintech Singapore",
