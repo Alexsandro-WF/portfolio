@@ -84,6 +84,9 @@
   background-color: rgba(255,255,255, 0.30);
   color: #fff;
 }
+.en-icon{
+  font-family: 'Dancing Script', cursive;  
+}
 .sidebar {
   padding: 10px;
   margin: 0;
@@ -413,8 +416,21 @@ ul {
   padding-top: 5px;
 }
 
-li.leadtext{
+.navtitle{
   padding-left: 10px;
+  font-family: 'Dancing Script', cursive;
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.onscreen-nav{
+  position: fixed;
+  margin-top: 30px;
+  margin-left: -15px;
 }
 #lead-car > .amp-carousel-button { display: none }
 
@@ -460,12 +476,11 @@ li.leadtext{
           
           <div class="col-xs-12 common-text padding-right-20 padding-top-30">
             <ul>
-              <li class="leadtext">Alexsandro WF</li>
               <li><a class="nav-btn" href="#leadspace" on="tap:leadspace.scrollTo">{{Home}}</a></li>
-              <li class="leadtext">{{Curriculo}}</li>
+              <li class="navtitle">{{Curriculo}}</li>
               <li><a class="nav-btn" href="#Sobre" on="tap:Sobre.scrollTo">{{Sobre}}</a></li>
               <li><a class="nav-btn" href="#Habilidades" on="tap:Habilidades.scrollTo">{{Habilidades}}</a></li>
-              <li class="leadtext">{{Portfolio}}</li>
+              <li class="navtitle">{{Portfolio}}</li>
               <li><a class="nav-btn" href="#WebDesign" on="tap:WebDesign.scrollTo">{{Web Design}}</a></li>
               <li><a class="nav-btn" href="#Logos" on="tap:Logos.scrollTo">{{Logos}}</a></li>
               <li><a class="nav-btn" href="#Photoshop" on="tap:Photoshop.scrollTo">{{Photoshop}}</a></li>
@@ -475,7 +490,7 @@ li.leadtext{
           </div>
 
           <div class="col-xs-12 padding-left-30 common-text">
-            <div class="leadtext">
+            <div class="navtitle">
               <span>{{Me encontre}}</span>
             </div>
             <a href="mailto:wnukfilho@hotmail.com" class="textcolor-teal"><i class="icons rounded material-icons">email</i><span class="padding-bottom-fix"> wnukfilho@hotmail.com</span></a><br /><br />
@@ -484,7 +499,7 @@ li.leadtext{
             <a href="https://www.instagram.com/ale.wf/"><span><svg class="icons rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></span></a>
             <a href="https://www.linkedin.com/in/alexsandro-wnuk-filho-412442b8"><span><svg class="icons rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3C6.1,3 7,3.9 7,5C7,6.1 6.1,7 5,7C3.9,7 3,6.1 3,5C3,3.9 3.9,3 5,3Z" /></svg></span></a>
             <a href="https://za.pinterest.com/alexsandrowf/"><span><svg class="icons rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M9.04,21.54C10,21.83 10.97,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2C6.48,2 2,6.48 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.83 11.83,13.06 11.54,14.24C11.37,15.22 12.06,16.08 13.06,16.08C14.84,16.08 16.22,14.18 16.22,11.5C16.22,9.1 14.5,7.46 12.03,7.46C9.21,7.46 7.55,9.56 7.55,11.77C7.55,12.63 7.83,13.5 8.29,14.07C8.38,14.13 8.38,14.21 8.35,14.36L8.06,15.45C8.06,15.62 7.95,15.68 7.78,15.56C6.5,15 5.76,13.18 5.76,11.71C5.76,8.55 8,5.68 12.32,5.68C15.76,5.68 18.44,8.15 18.44,11.43C18.44,14.87 16.31,17.63 13.26,17.63C12.29,17.63 11.34,17.11 11,16.5L10.33,18.87C10.1,19.73 9.47,20.88 9.04,21.57V21.54Z" /></svg></span></a>
-            <div class="leadtext">
+            <div class="navtitle">
               <span>{{Compartilhe}}</span>
             </div>
             <div>
@@ -513,60 +528,6 @@ li.leadtext{
       </amp-list>
 
   </amp-sidebar>
-  <amp-sidebar id="sidebar2" layout="nodisplay" side="right" class="purple-dark-4 sidebar-width">
-    <template type="amp-mustache" id="amp-template-sidebar2">
-      <div class="row drop-shadow purple-dark-3 textcolor-white-af">
-        <div class="col-xs-12 title-text padding-left-30">
-          <h1>{{Contato}}</h1>
-        </div>
-      </div>
-      <div class="row center-xs">
-        
-        <div class="col-xs-10 col-md-8 center-xs middle-xs padding-top-30">
-          <form class="sample-form"
-            method="post"
-            target="_top"
-            custom-validation-reporting="as-you-go">
-            <!--action-xhr="#"-->
-            <span visible-when-invalid="valueMissing"
-              validation-for="as-you-go-name">{{Por gentileza, insira o seu nome}}</span>
-            <input class="textfield padding-20" type="text"
-              id="as-you-go-name"
-              name="name"
-              placeholder="{{Nome}}"
-              required>
-
-            <br />
-            <span visible-when-invalid="valueMissing"
-              validation-for="as-you-go-email">{{Por gentileza, insira o seu e-mail}}</span>
-            <span visible-when-invalid="typeMismatch"
-              validation-for="as-you-go-email">{{Por gentileza, insira o seu e-mail com o @ e o servidor (ex. exemplo@exemplo.com)}}</span>
-            <input class="textfield padding-20" type="email"
-              id="as-you-go-email"
-              name="email"
-              placeholder="{{Email}}"
-              required>
-            <textarea class="textfield padding-20" rows= "3" placeholder="{{Mensagem}}" id="as-you-go-mensagem"></textarea>
-            <br />
-            <input class="btn btn-large teal textcolor-white-af" type="submit" value="{{Enviar}}"></input>
-            <div submit-success>
-              {{Successo!}}
-            </div>
-            <div submit-error>
-              {{Algo não saiu como o planejado...}}
-            </div>
-          </form>
-        </div>
-      </div>
-    </template>
-    <amp-list layout="fixed-height"
-      height="100vh"
-      src="//alexsandrof.sandbox.msiteproject.com/amp/pt.json"
-      [src]="lang"
-      template="amp-template-sidebar2">
-    </amp-list>
-
-  </amp-sidebar>
 
   <amp-state id="option">
     <script type="application/json">
@@ -578,11 +539,13 @@ li.leadtext{
     <header class="headerbar purple-dark-4 textcolor-white-af row between-xs drop-shadow middle-xs">
       
         <a role="button" on="tap:sidebar1.toggle" class=""><i class="material-icons hamburger">more_vert</i></a>
+        <a class="head-nav-btn title-text text-nav textcolor-white-af" href="#leadspace" on="tap:leadspace.scrollTo">Alexsandro WF</a>
+<!--
         <amp-carousel height="3em"
         layout="fixed-height"
         class="col-xs-10 center-xs"
         type="carousel">
-          <a class="head-nav-btn title-text text-nav textcolor-white-af" href="#leadspace" on="tap:leadspace.scrollTo">Alexsandro WF</a>
+          
           <a class="head-nav-btn title-text text-nav" href="#Sobre" on="tap:Sobre.scrollTo">{{Sobre}}</a>
           <a class="head-nav-btn title-text text-nav" href="#Habilidades" on="tap:Habilidades.scrollTo">{{Habilidades}}</a>
           <a class="head-nav-btn title-text text-nav" href="#WebDesign" on="tap:WebDesign.scrollTo">{{Web Design}}</a>
@@ -591,11 +554,30 @@ li.leadtext{
           <a class="head-nav-btn title-text text-nav" href="#YouTube" on="tap:YouTube.scrollTo">{{Canal no YouTube}}</a>
           <a class="head-nav-btn title-text text-nav" href="#Contato" on="tap:Contato.scrollTo">{{Contato}}</a>
         </amp-carousel>
-        <a role="button" [hidden]="option != 1" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><i class="material-icons hamburger">PT</i></a>
-        <a class="btn btn-large purple-dark-4 textcolor-white-af" >{{Pt}}</a>
-        <a class="btn btn-large purple-dark-4 textcolor-white-af" [hidden]="option != 0" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json' , option : 1 })">{{En}}</a>
+      -->
+        <a role="button" [hidden]="option != 1" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><span class="hamburger en-icon">Pt</span></a>
+        <a role="button" [hidden]="option != 0" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json' , option : 1 })"><span class="hamburger en-icon">En</span></a>
       
     </header>
+
+<div class="row">
+  <div class="col-lg-2">
+    <div class="col-xs-12 common-text padding-right-20 padding-top-30 onscreen-nav">
+      <ul>
+        <li><a class="nav-btn" href="#leadspace" on="tap:leadspace.scrollTo">{{Home}}</a></li>
+        <li class="navtitle">{{Curriculo}}</li>
+        <li><a class="nav-btn" href="#Sobre" on="tap:Sobre.scrollTo">{{Sobre}}</a></li>
+        <li><a class="nav-btn" href="#Habilidades" on="tap:Habilidades.scrollTo">{{Habilidades}}</a></li>
+        <li class="navtitle">{{Portfolio}}</li>
+        <li><a class="nav-btn" href="#WebDesign" on="tap:WebDesign.scrollTo">{{Web Design}}</a></li>
+        <li><a class="nav-btn" href="#Logos" on="tap:Logos.scrollTo">{{Logos}}</a></li>
+        <li><a class="nav-btn" href="#Photoshop" on="tap:Photoshop.scrollTo">{{Photoshop}}</a></li>
+        <li><a class="nav-btn" href="#YouTube" on="tap:YouTube.scrollTo">{{Canal no YouTube}}</a></li>
+        <li><a class="nav-btn" href="#Contato" on="tap:Contato.scrollTo">{{Contato}}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12 col-lg-10">
 
   <div id='leadspace' class="row center-xs wallpaper-section middle-xs drop-shadow">
     <div id='cover-wallpapper' class="col-xs-12 col-md-4 col-lg-3 padding-top-30 padding-bottom-30 middle-xs">
@@ -607,9 +589,10 @@ li.leadtext{
 
     </div>
   </div>
+
   <div class="row drop-shadow teal textcolor-white-af">
     <div class="col-xs-12 leadtext padding-left-30 padding-top-20 padding-bottom-20">
-      <amp-carousel width="100vw"
+      <amp-carousel width="100%"
         id="lead-car"
         height="4rem"
         type="slides"
@@ -640,7 +623,6 @@ li.leadtext{
 <!--  <button class="scroll-button btn btn-large textcolor-white-af teal drop-shadow" on="tap:leadspace.scrollTo" type="button" name="button"><i class="material-icons scroll-button-icon">arrow_upward</i></button>-->
 
    <button class="scroll-button btn btn-large textcolor-white-af teal" on="tap:leadspace.scrollTo" type="button" name="button"><i class="material-icons scroll-button-icon">arrow_upward</i></button>
-
 
   <div class="row drop-shadow textcolor-teal-dark-3" id="Sobre">
     <div class="col-xs-12 leadtext padding-left-30 padding-top-30 padding-bottom-30">
@@ -1098,21 +1080,6 @@ li.leadtext{
           layout="responsive"
           autoplay
           type="slides">
-          <amp-img src="src/photoshop/natalia-luzes.jpg"
-            width="400"
-            height="300"
-            layout="responsive"></amp-img>
-        </amp-carousel>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-6 col-lg-3 padding-20">
-      <div class="drop-shadow border-card">
-        <amp-carousel lightbox
-          width="300"
-          height="300"
-          layout="responsive"
-          autoplay
-          type="slides">
           <amp-img src="src/extras/cartacc83o-chris.png"
             width="400"
             height="300"
@@ -1198,6 +1165,9 @@ li.leadtext{
     </div>
     <!-- End YouTube -->
 
+    
+  </div>
+</div>
   <div class="row drop-shadow purple-dark-3 textcolor-white-af" id="Contato">
     <div class="col-xs-12 title-text padding-left-30">
       <h1>{{Contato}}</h1>
