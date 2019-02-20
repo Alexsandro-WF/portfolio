@@ -591,7 +591,8 @@ li.leadtext{
           <a class="head-nav-btn title-text text-nav" href="#YouTube" on="tap:YouTube.scrollTo">{{Canal no YouTube}}</a>
           <a class="head-nav-btn title-text text-nav" href="#Contato" on="tap:Contato.scrollTo">{{Contato}}</a>
         </amp-carousel>
-        <a class="btn btn-large purple-dark-4 textcolor-white-af" [hidden]="option != 1" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })">{{Pt}}</a>
+        <a role="button" [hidden]="option != 1" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><i class="material-icons hamburger">PT</i></a>
+        <a class="btn btn-large purple-dark-4 textcolor-white-af" >{{Pt}}</a>
         <a class="btn btn-large purple-dark-4 textcolor-white-af" [hidden]="option != 0" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json' , option : 1 })">{{En}}</a>
       
     </header>
