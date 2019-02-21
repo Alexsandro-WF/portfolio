@@ -40,7 +40,7 @@
 
     .icons{
       fill: #fff;
-      padding: 10px;
+      padding: 12px;
     }
     a{
       text-decoration: none;
@@ -76,7 +76,6 @@
   padding: 10px;
   background-color: transparent;
   border-radius: 100%;
-  color: #fff;
 }
 .hamburger:hover {
   background-color: rgba(255,255,255, 0.10);
@@ -89,6 +88,8 @@
 }
 .en-icon{
   font-family: 'Dancing Script', cursive;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .sidebar {
   padding: 10px;
@@ -230,7 +231,7 @@ ul {
   display: inline-block;
   font-family: "Poiret One", sans-serif;
   font-size: 20px;
-  border-radius: 50px;
+  border-radius: 0px 50px 50px 0px;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1;
@@ -289,6 +290,10 @@ ul {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.40); }
   .btn:active {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.80); }
+
+    .border-card.drop-shadow:hover{
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.60);
+    }
 
     .textfield {
       border: none;
@@ -378,6 +383,9 @@ ul {
     .onscreen-nav{
       display : none;
     }
+    .show-lg{
+      display : none;
+    }
   }
 .padding-top-leadspace{
       padding-top: 8vh;
@@ -461,7 +469,7 @@ ul {
   display: inline-block;
   font-family: "Poiret One", sans-serif;
   font-size: 20px;
-  border-radius: 50px;
+  border-radius: 0px 50px 50px 0px;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1;
@@ -477,6 +485,7 @@ ul {
     background-color: rgba(74,20,140, 0.40);
     color: #fff;
   }
+
 
 
 #lead-car > .amp-carousel-button { display: none }
@@ -557,12 +566,11 @@ ul {
     {
       "duration" : "1",
       "fill": "both",
-      "iterations": "1",
       "direction": "alternate",
       "animations": [{
         "selector": "#NavBar",
         "keyframes": [{
-          "class" : "fixed"
+          "transform": "translateY(0)"
         }]
       }]
     }
@@ -580,7 +588,7 @@ ul {
       "animations": [{
         "selector": "#NavBar",
         "keyframes": [{
-          "class": "relative"
+          "transform": "translateY(+30%)"
         }]
       }]
     }
@@ -607,7 +615,12 @@ ul {
       <template type="amp-mustache" id="amp-template-sidebar1">
         <div class="row">
 
-          <div class="col-xs-12 common-text padding-right-20 hide-lg padding-top-30">
+          <div class="col-xs-12 hide-lg padding-left-20 padding-top-30">
+            <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><span class="hamburger en-icon textcolor-purple-dark4" [class]="option == 0 ? 'hamburger en-icon textcolor-purple-dark4' : 'hamburger en-icon btn-disabled'">Pt</span></a>
+            <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json?banana' , option : 1 })"><span class="hamburger en-icon btn-disabled" [class]="option == 1 ? 'hamburger en-icon textcolor-purple-dark4' : 'hamburger en-icon btn-disabled'">En</span></a>
+          </div>
+
+          <div class="col-xs-12 common-text padding-right-20 hide-lg padding-top-20">
             <ul>
               <li class="navtitle">{{Curriculo}}</li>
               <li><a class="nav-btn" href="#Sobre" on="tap:Sobre.scrollTo">{{Sobre}}</a></li>
@@ -665,10 +678,10 @@ ul {
 
         <a role="button" on="tap:sidebar1.toggle" class=""><i class="material-icons hamburger">more_vert</i></a>
         <a class="head-nav-btn title-text leadtext textcolor-white-af" href="#leadspace" on="tap:leadspace.scrollTo">Alexsandro WF</a>
-        <div>
-          <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><span class="hamburger en-icon" [class]="option == 0 ? 'hamburger en-icon' : 'hamburger en-icon btn-disabled'">Pt</span></a>
-          <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json?banana' , option : 1 })"><span class="hamburger en-icon btn-disabled" [class]="option == 1 ? 'hamburger en-icon' : 'hamburger en-icon btn-disabled'">En</span></a>
-        </div>               
+        <div class="show-lg">
+          <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/pt.json' , option : 0 })"><span class="hamburger en-icon textcolor-white-af" [class]="option == 0 ? 'hamburger en-icon textcolor-white-af' : 'hamburger en-icon btn-disabled'">Pt</span></a>
+          <a role="button" on="tap:AMP.setState({ lang: 'https://alexsandrof.sandbox.msiteproject.com/amp/en.json?banana' , option : 1 })"><span class="hamburger en-icon btn-disabled" [class]="option == 1 ? 'hamburger en-icon textcolor-white-af' : 'hamburger en-icon btn-disabled'">En</span></a>
+        </div>
     </header>
 
 
@@ -715,7 +728,11 @@ ul {
       <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
         layout="nodisplay">
       </amp-position-observer>
-      <amp-position-observer on="enter:unpinAnim.start; exit:pinAnim.start"
+      <amp-position-observer on="scroll:unpinAnim.seekTo(percent=event.percent)"
+        intersection-ratios="0"
+        layout="nodisplay">
+      </amp-position-observer>
+      <amp-position-observer on="enter:pinAnim.start; exit:pinAnim.pause"
         layout="nodisplay">
       </amp-position-observer>
 
@@ -723,8 +740,8 @@ ul {
   </div>
 
 <!--  <button class="scroll-button btn btn-large textcolor-white-af teal drop-shadow" on="tap:leadspace.scrollTo" type="button" name="button"><i class="material-icons scroll-button-icon">arrow_upward</i></button>-->
-  
-   
+
+
    <div class="row">
      <div class="col-lg-2" id="NavBar">
        <div class="col-xs-12 common-text padding-right-20 onscreen-nav">
@@ -742,7 +759,7 @@ ul {
        </div>
      </div>
      <div class="col-xs-12 col-lg-10">
-  <div class="row drop-shadow textcolor-teal-dark-3" id="Sobre">
+  <div class="row drop-shadow textcolor-teal" id="Sobre">
     <div class="col-xs-12 leadtext padding-left-30 padding-top-30 padding-bottom-30">
       <span>{{Curriculo}}</span>
     </div>
@@ -832,7 +849,7 @@ ul {
 
   <!-- End Habilidades -->
 
-  <div class="row drop-shadow textcolor-teal-dark-3" id="WebDesign">
+  <div class="row drop-shadow textcolor-teal" id="WebDesign">
     <div class="col-xs-12 leadtext padding-left-30 padding-top-30 padding-bottom-30">
       <span>{{Portfolio}}</span>
     </div>
@@ -974,7 +991,7 @@ ul {
     </div>
   </div>
   <div class="row drop-shadow padding-20">
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -993,7 +1010,7 @@ ul {
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20  row-lg-4">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20  row-lg-4">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1008,7 +1025,7 @@ ul {
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1016,14 +1033,14 @@ ul {
           height="300"
           layout="responsive"
           type="slides">
-          <amp-img src="src/logos/logo-SER-opt2.png"
+          <amp-img src="src/logos/logo-SER-opt2.svg"
             width="400"
             height="300"
             layout="responsive"></amp-img>
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1038,7 +1055,7 @@ ul {
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1057,7 +1074,7 @@ ul {
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1076,7 +1093,7 @@ ul {
         </amp-carousel>
       </div>
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1092,7 +1109,7 @@ ul {
       </div>
 
     </div>
-    <div class="col-xs-12 col-md-4 col-lg-2 padding-20">
+    <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
       <div class="drop-shadow border-card">
         <amp-carousel lightbox
           width="300"
@@ -1231,7 +1248,7 @@ ul {
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
+      <div class="col-xs-12 col-md-4 col-lg-4 padding-20">
         <div class="drop-shadow border-card">
           <amp-carousel
             width="400"
@@ -1247,7 +1264,7 @@ ul {
           </amp-carousel>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
+      <div class="col-xs-12 col-md-4 col-lg-4 padding-20">
         <div class="drop-shadow border-card">
           <amp-carousel lightbox
             width="400"
