@@ -556,6 +556,8 @@ ul {
   box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.60);
 }
 
+.amp-carousel-button { visibility: hidden; opacity: 1; }
+
 #lead-car > .amp-carousel-button { display: none }
 
 
@@ -637,29 +639,13 @@ ul {
       "animations": [{
         "selector": "#onscreen-nav",
         "keyframes": [{
-          "transform": "translateY(-15rem)"
+          "transform": "translateY(-100vh)"
         }]
       }]
     }
   </script>
 </amp-animation>
 
-<amp-animation id="scrollAnim"
-  layout="nodisplay">
-  <script type="application/json">
-    {
-      "duration" : "1",
-      "fill": "both",
-      "direction": "reverse",
-      "animations": [{
-        "selector": "#onscreen-nav",
-        "keyframes": [{
-          "transform": "translateY(10vh)"
-        }]
-      }]
-    }
-  </script>
-</amp-animation>
 
 
 
@@ -864,6 +850,7 @@ ul {
   </div>
   <div class="row padding-20">
     <amp-carousel height="8rem"
+    id="skillscar"
     class="padding-left-20 padding-right-20 border-card drop-shadow  padding-20"
     layout="fixed-height"
     type="carousel">
@@ -1382,6 +1369,7 @@ ul {
               layout="responsive"></amp-img>
           </amp-carousel>
         </div>
+        
       </div>
 
     </div>
@@ -1392,22 +1380,23 @@ ul {
   </div>
 </div>
   <div class="row drop-shadow purple-dark-3 textcolor-white-af footerbar" id="Contato">
-    <amp-position-observer on="scroll:pinAnim.seekTo(percent=event.percent)"
-      intersection-ratios="0"
-      layout="nodisplay">
-    </amp-position-observer>
+    
     <div class="col-xs-12 title-text padding-left-30 padding-top-20 padding-bottom-20">
       <span>{{Contato}}</span>
     </div>
   </div>
   <div class="footerbar drop-shadow purple-dark-4 textcolor-white-af row padding-top-30 padding-bottom-30 front">
+    <amp-position-observer on="scroll:pinAnim.seekTo(percent=event.percent)"
+          intersection-ratios="0"
+          layout="nodisplay">
+        </amp-position-observer>
     <div class="col-xs-12 col-md-6 center-xs middle-xs">
-      <form class="sample-form"
+      <form
         method="post"
         target="_top"
         action-xhr="https://alexsandrof.sandbox.msiteproject.com/amp/email.php"
         custom-validation-reporting="as-you-go">
-        <span visible-when-invalid="valueMissing"
+        <span class="common-text" visible-when-invalid="valueMissing"
           validation-for="as-you-go-name">{{Por gentileza, insira o seu nome}}</span>
         <input class="textfield padding-20" type="text"
           id="as-you-go-name"
@@ -1416,9 +1405,9 @@ ul {
           required>
 
         <br />
-        <span visible-when-invalid="valueMissing"
+        <span class="common-text" visible-when-invalid="valueMissing"
           validation-for="as-you-go-email">{{Por gentileza, insira o seu e-mail}}</span>
-        <span visible-when-invalid="typeMismatch"
+        <span class="common-text" visible-when-invalid="typeMismatch"
           validation-for="as-you-go-email">{{Por gentileza, insira o seu e-mail com o @ e o servidor (ex. exemplo@exemplo.com)}}</span>
         <input class="textfield padding-20" type="email"
           id="as-you-go-email"
@@ -1427,14 +1416,14 @@ ul {
           required>
         <textarea class="textfield padding-20" rows= "3" placeholder="{{Mensagem}}" id="as-you-go-mensagem"></textarea>
         <br />
-        <input type="submit" class="btn btn-large teal textcolor-white-af"
-          value="{{Enviar}}">
-        <div submit-success>
-          {{Successo!}}
+        <div submit-success class="common-text padding-bottom-20 padding-top-20">
+          {{Sucesso!}}
         </div>
-        <div submit-error>
+        <div submit-error class="common-text padding-bottom-20 padding-top-20">
           {{Algo não saiu como o planejado...}}
         </div>
+        <input type="submit" class="btn btn-large teal textcolor-white-af"
+          value="{{Enviar}}">
       </form>
       <br />
     </div>
