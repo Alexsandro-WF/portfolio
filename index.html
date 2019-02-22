@@ -56,7 +56,7 @@
 }
 
 .lang-btn {
-  border-radius: 15px;
+  border-radius: 0.3rem;
   position: relative;
   height: 3rem;
   margin: 0;
@@ -249,7 +249,7 @@ ul {
 }
 .border-card {
   padding: 30px;
-  border-radius: 50px;
+  border-radius: 1.5rem;
 }/*
 .cls-7{font-size:286.24px;fill:#fff;font-family:Dancing Script, Dancing Script;}*/
 .nav-btn {
@@ -292,7 +292,7 @@ ul {
 .btn {
   background: transparent;
   border: none;
-  border-radius: 15px;
+  border-radius: 0.3rem;
   position: relative;
   height: 1.2em;
   margin: 0;
@@ -336,6 +336,12 @@ ul {
     transform: translate( -1% , -1% );
   }
 
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
     .textfield {
       border: none;
       border-bottom: 1px solid rgba(255,255,255, 0.7);
@@ -789,22 +795,22 @@ ul {
         layout="fixed-height"
         autoplay
         delay="3000">
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{Web Designer}}</span>
         </div>
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{Web Developer}}</span>
         </div>
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{Designer Grafico}}</span>
         </div>
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{Desenhista}}</span>
         </div>
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{YouTuber}}</span>
         </div>
-        <div class="row center-xs middle-xs">
+        <div class="row start-xs center-md middle-xs">
           <span>{{Artista}}</span>
         </div>
       </amp-carousel>
@@ -857,49 +863,49 @@ ul {
     </div>
   </div>
   <div class="row padding-20">
-    <amp-carousel height="200"
-    class="padding-left-20 padding-right-20 border-card drop-shadow"
+    <amp-carousel height="8rem"
+    class="padding-left-20 padding-right-20 border-card drop-shadow  padding-20"
     layout="fixed-height"
     type="carousel">
       <amp-img src="src/icons/amp.svg"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/bootstrap-stack.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/wordpress.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/angular.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/react.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/illustrator.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/photoshop.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/premiere.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/coreldraw.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/nodejs.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/MySQL.svg"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/php.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
       <amp-img src="src/icons/python.png"
-        width="200"
-        height="200"></amp-img>
+        width="8rem"
+        height="8rem"></amp-img>
     </amp-carousel>
 
   </div>
@@ -919,7 +925,7 @@ ul {
       <span>{{Web Design}}</span>
     </div>
   </div>
-  <div class="row">
+  <div class="row  padding-20">
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
           <div class="drop-shadow border-card">
             <amp-carousel lightbox
@@ -1399,7 +1405,7 @@ ul {
       <form class="sample-form"
         method="post"
         target="_top"
-        action-xhr="//alexsandrof.sandbox.msiteproject.com/amp/email.php"
+        action-xhr="https://alexsandrof.sandbox.msiteproject.com/amp/email.php"
         custom-validation-reporting="as-you-go">
         <span visible-when-invalid="valueMissing"
           validation-for="as-you-go-name">{{Por gentileza, insira o seu nome}}</span>
@@ -1421,7 +1427,7 @@ ul {
           required>
         <textarea class="textfield padding-20" rows= "3" placeholder="{{Mensagem}}" id="as-you-go-mensagem"></textarea>
         <br />
-        <input class="btn btn-large teal textcolor-white-af" type="submit"
+        <input type="submit" class="btn btn-large teal textcolor-white-af"
           value="{{Enviar}}">
         <div submit-success>
           {{Successo!}}
