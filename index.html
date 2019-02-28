@@ -183,13 +183,15 @@ ul {
   margin-inline-end: 0px;
 }
 .leadspace-text{
-  font-family: 'Comfortaa', light;
+   font-family: 'Lovelo Line', light;
   font-weight: 300;
   display: block;
-}/*
+}
 .leadspace-text-2{
-  color: 
-}*/
+   font-family: 'Lovelo Line Bold', light;
+  font-weight: 300;
+  display: block;
+}
 .padding-bottom-fix{
   padding-bottom: 10px;
 }
@@ -256,29 +258,22 @@ ul {
 .nav-btn {
   background: transparent;
   border: none;
-  color: #4a148c;
   position: relative;
-  height: 36px;
-  margin: 0;
+  height: 1.4em;
   width: 90%;
   margin-left: -20px;
   margin-right: 30px;
   padding: 0 20px;
-  padding-left: 40px;
+  padding-left: 20px;
   display: inline-block;
   font-family: 'Comfortaa', light;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.4em;
   border-radius: 0px 50px 50px 0px;
-  line-height: 1;
+  line-height: 1.4em;
   letter-spacing: 0;
-  overflow: hidden;
   will-change: box-shadow;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 36px;
   vertical-align: middle; }
   .nav-btn:focus {
     border: 0; }
@@ -511,6 +506,24 @@ ul {
       font-weight: normal;
       src: local('Ink Free Regular'), url('src/Inkfree.woff') format('woff');
   }
+  @font-face {
+      font-family: 'Lovelo Line';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Lovelo Line'), url('src/Lovelo-LineLight.woff') format('woff');
+  }
+  @font-face {
+      font-family: 'Lovelo Line Bold';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Lovelo Line Bold'), url('src/Lovelo-LineBold.woff') format('woff');
+  }
+  @font-face {
+      font-family: 'ColorTube Regular';
+      font-style: normal;
+      font-weight: normal;
+      src: local('ColorTube Regular'), url('src/ColorTube-Regular.otf') format('truetype');
+  }
   #sidebar1{
     width: 25vw;
   }
@@ -597,19 +610,19 @@ ul {
   z-index: 0;
   width: 90%;
   margin: 0;
+  height: 1.6em;
   margin-left: -20px;
   margin-right: 30px;
-  padding: 0 20px;
+  padding: 0 30px;
   padding-left: 30px;
   display: inline-block;
   font-family: 'Comfortaa', cursive;
-  font-size: 20px;
+  font-size: 1.2em;
   border-radius: 0px 50px 50px 0px;
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.4em;
   will-change: box-shadow;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  line-height: 36px;
   vertical-align: middle; }
   .onscreen-nav > ul > li > a:hover {
     background-color: rgba(74,20,140, 0.70);
@@ -685,6 +698,15 @@ ul {
   padding-top: 5px;
 }
 
+.vertical-fix{
+  vertical-align: super;
+}
+
+.icon-fix {
+  font-size: 25px;
+  vertical-align: text-bottom;
+}
+
 .cls-1{isolation:isolate;}.cls-2{opacity:0.6;mix-blend-mode:multiply;}.cls-3{fill:#662d91;}.cls-4{fill:#00a99d;}.cls-5{fill:#93278f;}.cls-6{fill:url(#Gradiente_sem_nome_6);}.cls-7{font-size:286.24px;fill:#fff;font-family:'Ink Free Regular', cursive;}
 </style>
   <!--
@@ -709,6 +731,7 @@ ul {
   <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
   <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
 </head>
 <!-- ## Body -->
 <!-- -->
@@ -813,24 +836,24 @@ ul {
   <!-- Google Tag Manager -->
 <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-T92GGN5&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
   <amp-sidebar id="sidebar1" layout="nodisplay" side="left" class="gray sidebar-width drop-shadow">
-        <div class="row">
+        <div class="row padding-20">
 
-          <div class="col-xs-12 common-text padding-right-20 hide-lg padding-top-30">
+          <div class="col-xs-12 padding-right-20 hide-lg padding-top-30 textcolor-deep-purple">
             <ul>
-              <li><a on="tap:cover-wallpapper.scrollTo" class="nav-btn navtitle textcolor-deep-purple">Home</a></li>
-              <!--<li class="navtitle padding-top-10 textcolor-deep-purple">Portfólio</li>-->
-              <li><a class="nav-btn" on="tap:WebDesign.scrollTo">Web</a></li>
-              <li><a class="nav-btn" on="tap:Logos.scrollTo">Logos</a></li>
-              <li><a class="nav-btn" on="tap:Outros.scrollTo">Outros</a></li>
-              <li><a class="nav-btn" on="tap:Contato.scrollTo">Contato</a></li>
+              <li><a on="tap:leadspace.scrollTo" class="nav-btn"><i class="material-icons icon-fix">home</i> Home</a></li>
+             <!--<li class="navtitle padding-top-10 textcolor-deep-purple">Portfólio</li>-->
+             <li><a on="tap:WebDesign.scrollTo" class="nav-btn"><i class="material-icons icon-fix">settings_ethernet</i> Web</a></li>
+             <li><a on="tap:Logos.scrollTo" class="nav-btn"><i class="material-icons icon-fix">brush</i> Logos</a></li>
+             <li><a on="tap:Outros.scrollTo" class="nav-btn"><i class="material-icons icon-fix">more_horiz</i> Outros</a></li>
+             <li><a on="tap:Contato.scrollTo" class="nav-btn"><i class="material-icons icon-fix">question_answer</i> Contato</a></li>
             </ul>
           </div>
 
-          <div class="col-xs-12 padding-left-30 common-text">
+          <div class="col-xs-12 common-text">
             <div class="navtitle padding-top-20 padding-bottom-20 textcolor-deep-purple">
               <span>Me encontre</span>
             </div>
-            <a target="_blank" href="mailto:wnukfilho@hotmail.com" class="textcolor-deep-purple"><i class="icons purple-static-bg rounded material-icons textcolor-white-af">email</i><span class="padding-bottom-fix"> wnukfilho@hotmail.com</span></a><br /><br />
+            <a target="_blank" href="mailto:wnukfilho@hotmail.com" class="textcolor-deep-purple"><i class="icons purple-static-bg rounded material-icons textcolor-white-af">email</i><span class="vertical-fix"> wnukfilho@hotmail.com</span></a><br /><br />
             <a target="_blank" href="https://twitter.com/alexsandrowf"><span><svg class="icons purple-static-bg rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg></span></a>
             <a target="_blank" href="https://pt-br.facebook.com/public/Alexsandro-Wnuk-Filho"><span><svg class="icons purple-static-bg rounded" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6C10,3.79 11.79,2 14,2H17Z" /></svg></span></a>
             <a target="_blank" href="https://www.instagram.com/ale.wf/"><span><svg class="icons rounded purple-static-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></span></a>
@@ -1029,19 +1052,19 @@ ul {
     <header id="top" class="headerbar title-background textcolor-white-af row between-xs drop-shadow middle-xs target target-anchor">
 
         <a role="button" on="tap:sidebar1.toggle" class=""><i class="material-icons hamburger">more_vert</i></a>
-        <a class="head-nav-btn title-text leadtext textcolor-white-af" href="#leadspace" on="tap:leadspace.scrollTo">Alexsandro WF</a>
+        <a class="head-nav-btn title-text leadtext textcolor-white-af" on="tap:leadspace.scrollTo">Alexsandro WF</a>
     </header>
 
 <div class="row">
 <div class="col-lg-2" id="NavBar">
  <div class="col-xs-12 common-text padding-right-20 onscreen-nav" id="onscreen-nav">
    <ul>
-     <li><a on="tap:leadspace.scrollTo" class="navtitle textcolor-deep-purple">Home</a></li>
+     <li><a on="tap:leadspace.scrollTo" class="navtitle textcolor-deep-purple"><i class="material-icons icon-fix">home</i> Home</a></li>
      <!--<li class="navtitle padding-top-10 textcolor-deep-purple">Portfólio</li>-->
-     <li><a on="tap:WebDesign.scrollTo">Web</a></li>
-     <li><a on="tap:Logos.scrollTo">Logos</a></li>
-     <li><a on="tap:Outros.scrollTo">Outros</a></li>
-     <li><a on="tap:Contato.scrollTo">Contato</a></li>
+     <li><a on="tap:WebDesign.scrollTo"><i class="material-icons icon-fix">settings_ethernet</i> Web</a></li>
+     <li><a on="tap:Logos.scrollTo"><i class="material-icons icon-fix">brush</i> Logos</a></li>
+     <li><a on="tap:Outros.scrollTo"><i class="material-icons icon-fix">more_horiz</i> Outros</a></li>
+     <li><a on="tap:Contato.scrollTo"><i class="material-icons icon-fix">question_answer</i> Contato</a></li>
    </ul>
  </div>
   <amp-position-observer on="scroll:scrollAnim.seekTo(percent=event.percent)"
@@ -1054,11 +1077,11 @@ ul {
       <div class="col-xs-12 padding-top-leadspace">
 
       </div>
-    <div id='cover-wallpapper' class="col-xs-12 col-md-10  middle-xs">
-      <amp-fit-text width="8"
-    height="1"
+    <div id='cover-wallpapper' class="col-xs-12 middle-xs">
+      <amp-fit-text
+    height="10rem"
     class="leadspace-text center-xs textcolor-deep-purple"
-    layout="responsive">Alexsandro WF</amp-fit-text>
+    layout="fixed-height">AlexsandroWF</amp-fit-text>
     </div>
     <div class="col-xs-12 padding-top-30 hide-lg">
 
@@ -1076,19 +1099,19 @@ ul {
         autoplay
         delay="3000">
         <div class="row start-xs center-md middle-xs">
-          <span>Web Designer</span>
+          <span><i class="material-icons icon-fix">code</i> Web Designer</span>
         </div>
         <div class="row start-xs center-md middle-xs">
-          <span>Web Developer</span>
+          <span><i class="material-icons icon-fix">settings_ethernet</i> Web Developer</span>
         </div>
         <div class="row start-xs center-md middle-xs">
-          <span>Designer Grafico</span>
+          <span><i class="material-icons icon-fix">brush</i> Designer Grafico</span>
         </div>
         <div class="row start-xs center-md middle-xs">
-          <span>Desenhista</span>
+          <span><i class="material-icons icon-fix">edit</i> Desenhista</span>
         </div>
         <div class="row start-xs center-md middle-xs">
-          <span>Artista</span>
+          <span><i class="material-icons icon-fix">color_lens</i> Artista</span>
         </div>
       </amp-carousel>
       <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
@@ -1104,7 +1127,7 @@ ul {
     <div class="col-xs-12 col-md-4 col-lg-3 padding-20" >
           <div class="drop-shadow border-card title-background" tabindex="" role="" on="tap:sidebar2.toggle">
             <div class="center-xs middle-xs">
-              <span class="leadtext textcolor-white-af">Quem sou eu? <i class="material-icons">add</i></span>
+              <span class="leadtext textcolor-white-af"><i class="material-icons icon-fix">face</i> Quem sou eu?</span>
             </div>
           </div>
         </div>
@@ -1125,143 +1148,111 @@ ul {
     </div>
   </div>
   <div class="row  padding-20">
+        
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/blog1.jpg"
+          <div hidden>
+            <amp-img src="src/pages/screencapture-ibm-think-fintech-asia-2018-08-09-10_20_03.png"
                 width="400"
                 height="300"
-                layout="responsive"></amp-img>
-              <amp-img src="src/pages/screencapture-naosimclaromas-wordpress-2019-02-12-16_51_18.png"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">Blog "Não, Sim, Claro, Mas"</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/IMG_2107.JPG"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-              <amp-img src="src/pages/screencapture-ibm-think-fintech-asia-2018-08-09-10_20_03.png"
-                width="400"
-                height="300"
+                lightbox="Fintech"
                 layout="responsive"></amp-img>
               <amp-img src="src/pages/screencapture-ibm-think-fintech-regtech-in-the-cognitive-era-2018-08-09-10_20_32.png"
                 width="400"
                 height="300"
+                lightbox="Fintech"
                 layout="responsive"></amp-img>
               <amp-img src="src/pages/screencapture-ibm-think-fintech-singapore-2018-08-09-10_21_00.png"
                 width="400"
-                height="300"
+                lightbox="Fintech"
+                height="3727"
                 layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">IBM Fintech Singapore</span>
-            </div>
           </div>
+          <amp-img src="src/pages/IMG_2107.JPG"
+            width="1440"
+            height="1080"
+            lightbox="Fintech"
+            class="drop-shadow border-card"
+            layout="responsive"></amp-img>
         </div>
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/IMG_2109.JPG"
-                width="400"
-                height="300"
+          <div hidden>
+            <amp-img src="src/pages/screencapture-manesconsult-br-2019-02-14-18_57_01.png"
+                width="1440"
+                height="5549"
+                lightbox="Manes"
                 layout="responsive"></amp-img>
-              <amp-img src="src/pages/screencapture-manesconsult-br-2019-02-14-18_57_01.png"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">Manes Consult</span>
-            </div>
           </div>
+          <amp-img src="src/pages/IMG_2109.JPG"
+                width="1440"
+                height="1080"
+                lightbox="Manes"
+                class="drop-shadow border-card"
+                layout="responsive"></amp-img>
         </div>
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/hcboidesk.png"
-                width="400"
-                height="300"
+          <div hidden>
+            <amp-img src="src/pages/Mock-desk.png"
+                width="1317"
+                height="4930"
+                lightbox="HCBois"
                 layout="responsive"></amp-img>
-              <amp-img src="src/pages/Mock-desk.png"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">HC Boi</span>
-            </div>
           </div>
+          <amp-img src="src/pages/hcboidesk.png"
+                width="1440"
+                class="drop-shadow border-card"
+                height="900"
+                lightbox="HCBois"
+                layout="responsive"></amp-img>
         </div>
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/ils-desk.png"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-              <amp-img src="src/pages/screencapture-profmarcaoinfo-kinghost-net-2019-02-12-16_14_44.png"
-                width="400"
-                height="300"
+          <div hidden>
+            <amp-img src="src/pages/screencapture-profmarcaoinfo-kinghost-net-2019-02-12-16_14_44.png"
+                width="1440"
+                height="2907"
+                lightbox="ILS"
                 layout="responsive"></amp-img>
               <amp-img src="src/pages/screencapture-profmarcaoinfo-kinghost-net-2019-02-12-16_15_27.png"
                 width="400"
-                height="300"
+                height="3204"
+                lightbox="ILS"
+                layout="responsive"></amp-img>            
+          </div>
+          <amp-img src="src/pages/ils-desk.png"
+                width="1440"
+                height="900"
+                lightbox="ILS"
+                class="drop-shadow border-card"
                 layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">Projeto ILS Automatizado</span>
-            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
+          <amp-img src="src/pages/granfiber.png"
+                width="400"
+                height="300"
+                lightbox="granfiber"
+                layout="responsive"
+                class="drop-shadow border-card"></amp-img>
+          <div hidden>
+            <amp-img src="src/pages/screencapture-granfiber-br-2019-02-21-09_13_28.png"
+                width="1160"
+                height="3331"
+                lightbox="granfiber"
+                layout="responsive"></amp-img>
           </div>
         </div>
         <div class="col-xs-12 col-md-4 col-lg-3 padding-20">
-          <div class="drop-shadow border-card">
-            <amp-carousel lightbox
-              width="400"
-              height="300"
-              layout="responsive"
-              type="slides">
-              <amp-img src="src/pages/granfiber.png"
-                width="400"
-                height="300"
+          <div hidden>
+            <amp-img src="src/pages/screencapture-naosimclaromas-wordpress-2019-02-12-16_51_18.png"
+                width="1440"
+                height="8534"
+                lightbox="Blog"
                 layout="responsive"></amp-img>
-              <amp-img src="src/pages/screencapture-granfiber-br-2019-02-21-09_13_28.png"
-                width="400"
-                height="300"
-                layout="responsive"></amp-img>
-            </amp-carousel>
-            <div class="center-xs middle-xs">
-              <span class="title-text textcolor-deep-purple">Granfiber</span>
-            </div>
           </div>
+            <amp-img src="src/pages/blog1.jpg"
+              width="1347"
+              height="663"
+              class="drop-shadow border-card"
+              lightbox="Blog"
+              layout="responsive"></amp-img>
         </div>
   </div>
   <!-- End PAGs -->
@@ -1521,24 +1512,24 @@ ul {
             autoplay
             type="slides">
             <amp-img src="src/youtube/005-7-coisas-q-vc-n-sabia-sobre-o-coldplay.jpg"
-              width="400"
-              height="300"
+              width="16"
+              height="9"
               layout="responsive"></amp-img>
             <amp-img src="src/youtube/008-chloe-howl.jpg"
-              width="400"
-              height="300"
+              width="16"
+              height="9"
               layout="responsive"></amp-img>
             <amp-img src="src/youtube/011-facebook.jpg"
-              width="400"
-              height="300"
+              width="16"
+              height="9"
               layout="responsive"></amp-img>
             <amp-img src="src/youtube/003-7-coisas-q-vc-n-sabia-sobre-a-lady-gaga.jpg"
-              width="400"
-              height="300"
+              width="16"
+              height="9"
               layout="responsive"></amp-img>
             <amp-img src="src/youtube/013-lastfm.jpg"
-              width="400"
-              height="300"
+              width="16"
+              height="9"
               layout="responsive"></amp-img>
           </amp-carousel>
         </div>
@@ -1606,7 +1597,7 @@ ul {
       <div class="title-text padding-top-20 padding-bottom-20">
         <span>Me encontre</span>
       </div>
-      <a target="_blank" href="mailto:wnukfilho@hotmail.com" class="textcolor-white-af"><i class="icons rounded material-icons white-line-button">email</i><span class="padding-bottom-fix"> wnukfilho@hotmail.com</span></a><br /><br />
+      <a target="_blank" href="mailto:wnukfilho@hotmail.com" class="textcolor-white-af"><i class="icons rounded material-icons white-line-button">email</i><span class="vertical-fix"> wnukfilho@hotmail.com</span></a><br /><br />
       <a target="_blank" href="https://twitter.com/alexsandrowf"><span><svg class="icons rounded white-line-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg></span></a>
       <a target="_blank" href="https://pt-br.facebook.com/public/Alexsandro-Wnuk-Filho"><span><svg class="icons rounded white-line-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6C10,3.79 11.79,2 14,2H17Z" /></svg></span></a>
       <a target="_blank" href="https://www.instagram.com/ale.wf/"><span><svg class="icons rounded white-line-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg></span></a>
