@@ -1,0 +1,10 @@
+{
+"bookendVersion": "v1.0",
+"shareProviders": [
+"email",
+"twitter",
+"facebook",
+"pinterest"
+],
+"components": []
+}
